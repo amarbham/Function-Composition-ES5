@@ -3,7 +3,7 @@ var button = document.getElementById('button');
 var p = document.getElementById('paragraph');
 
 var setButtonColour = setColour(button);
-var changeColour = setColourOnClick(button, p);
+var changeColour = setElemColourOnClick(button, p);
 
 
 function setColour(elem) {
@@ -12,10 +12,10 @@ function setColour(elem) {
     };
 };
 
-function setColourOnClick(elem, newP){
+function setElemColourOnClick(clickedElem, targetElem){
     return function(colour){
-        return elem.addEventListener('click', function () {
-            setColour(newP)(colour);
+        return clickedElem.addEventListener('click', function () {
+            setColour(targetElem)(colour);
         });
     };
 };
