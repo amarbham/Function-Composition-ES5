@@ -2,7 +2,7 @@
 var button = document.getElementById('button');
 var p = document.getElementById('paragraph');
 
-var setButtonColour = setColour(button);
+var buttonColour = setColour(button);
 var changeColour = setElemColourOnClick(button, p);
 
 
@@ -20,5 +20,5 @@ function setElemColourOnClick(clickedElem, targetElem){
     };
 };
 
-setButtonColour('#0000FF');
+buttonColour('#0000FF');
 changeColour('#00FF00');
